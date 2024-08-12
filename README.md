@@ -1,6 +1,6 @@
 # Custom Kafka MirrorMaker 2.0 (MM2) Replication Policy for Renaming Topics
 
-Currently, there is no configurable option available in connect-mirror-maker.properties to support renaming a topic during replication using MirrorMake 2 in Apache Kafka. This code adds the "replication.policy.topics.rename" option to connect-mirror-maker.properties and allow renaming topics during replication.  It Implements the custom [**IdentityReplicationPolicy**](https://github.com/apache/kafka/blob/3.8.0/connect/mirror-client/src/main/java/org/apache/kafka/connect/mirror/IdentityReplicationPolicy.java) and provides a custom replication policy JAR that overrides the topicSource method to change how MirrorMake 2 names topics in the replicated cluster.
+Currently, there is no configurable option available in *connect-mirror-maker.properties* to support renaming a topic during replication using MirrorMake 2 in Apache Kafka. This code adds the *replication.policy.topics.rename* option to *connect-mirror-maker.properties* and allow renaming topics during replication.  It Implements the custom [**IdentityReplicationPolicy**](https://github.com/apache/kafka/blob/3.8.0/connect/mirror-client/src/main/java/org/apache/kafka/connect/mirror/IdentityReplicationPolicy.java) and provides a custom replication policy JAR that overrides the topicSource method to change how MirrorMake 2 names topics in the replicated cluster.
 
 Prerequisites
 =====
@@ -55,7 +55,7 @@ $ vi kafka_2.13-3.8.0/config/connect-mirror-maker.properties
 # emit.heartbeats.interval.seconds = 5
 
 replication.policy.class=com.deimos.kafka.CustomMM2ReplicationPolicy
-replication.policy.topics.rename=event01,deimos-event01;event03,deimos-event03
+replication.policy.topics.rename=event01-old-name,event01-new-name;event02-old-name,event02-new-name
 ...
 ```
 For example, for Cluster A -> Cluster B replication, event01 is the topic running in Cluster A, will be renamed to new-event01 in Cluster B during replication.
