@@ -60,6 +60,6 @@ replication.policy.topics.rename=event01-old-name,event01-new-name;event02-old-n
 ```
 For example, for Cluster A -> Cluster B replication, event01-old-name is the topic running in Cluster A, will be renamed to event01-new-name in Cluster B during replication. It supports mutiple topics.
 
-Specify only those topics you want to rename in replication.policy.topics.rename, for the rest of topics the default replication policy applies.
+Specify only those topics you want to rename in *replication.policy.topics.rename*, for the rest of topics the default replication policy applies.
 
 
