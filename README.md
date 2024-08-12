@@ -54,7 +54,7 @@ $ vi kafka_2.13-3.8.0/config/connect-mirror-maker.properties
 # sync.topic.acls.enabled = false
 # emit.heartbeats.interval.seconds = 5
 
-replication.policy.class=com.deimos.kafka.CustomMM2ReplicationPolicy
+replication.policy.class=com.vpsee.kafka.CustomMM2ReplicationPolicy
 replication.policy.topics.rename=event01-old-name,event01-new-name;event02-old-name,event02-new-name
 ...
 ```
