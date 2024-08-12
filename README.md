@@ -39,7 +39,7 @@ $ cp CustomMM2ReplicationPolicy/target/CustomMM2ReplicationPolicy-1.0-SNAPSHOT.j
 Usage
 =====
 
-Open/edit connect-mirror-maker.properties and add replication.policy.class and replication.policy.topics.rename two parameters:
+Open/edit *connect-mirror-maker.properties* and add *replication.policy.class* and *replication.policy.topics.rename* two parameters:
 
 ```
 $ vi kafka_2.13-3.8.0/config/connect-mirror-maker.properties
